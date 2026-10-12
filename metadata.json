@@ -1,0 +1,545 @@
+# IRB_BALE
+{
+    "title": "Modalités de calcul et de publication des ratios prudentiels dans le cadre de la CRD IV et exigence de MREL",
+    "document_type": "NOTICE",
+    "version_date": "2024-06-28",
+    "language": "FR"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "title": "Guidelines on amending Guidelines on the application of the definition of default under Article 178 of Regulation (EU) No 575/2013",
+    "scope": ["BALE_IRB"],
+    "language": "EN",
+    "version_date": None
+}
+
+{
+    "issuer": "BCBS",
+    "document_type": "REGULATORY_FRAMEWORK",
+    "title": "The Basel Framework",
+    "scope": ["BALE_IRB"],
+    "language": "EN",
+    "version_date": None
+}
+
+{
+    "issuer": "EU",
+    "document_type": "DIRECTIVE",
+    "title": "Directive 2013/36/UE concernant l'accès à l'activité des établissements de crédit et la surveillance prudentielle des établissements de crédit et des entreprises d'investissement",
+    "reference": "Directive 2013/36/UE",
+    "publication_date": "2013-06-26",
+    "scope": ["BALE_IRB", "ICAAP"],
+    "language": "FR"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "ABE/GL/2014/13",
+    "title": "Orientations sur les procédures et les méthodologies communes à appliquer dans le cadre du processus de contrôle et d'évaluation prudentiels (SREP)",
+    "publication_date": "2014-12-19",
+    "scope": ["ICAAP"],
+    "language": "FR"
+}
+
+{
+    "issuer": "ECB",
+    "document_type": "GUIDE",
+    "title": "Projet de guide de la Banque centrale européenne relatif à l’évaluation du caractère significatif (EGMA) — Évaluation du caractère significatif des extensions et des modifications des modèles internes (IMM) et des approches par mesure avancée utilisées pour le calcul du risque d’ajustement de l’évaluation de crédit (A-CVA)",
+    "scope": ["BALE_IRB"],
+    "language": "FR",
+    "legal_status": "draft"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "RTS",
+    "title": "Final Draft Regulatory Technical Standards on the specification of the assessment methodology for competent authorities regarding compliance of an institution with the requirements to use the IRB Approach in accordance with Articles 144(2), 173(3) and 180(3)(b) of Regulation (EU) No 575/2013",
+    "scope": ["BALE_IRB"],
+    "language": "EN",
+    "legal_status": "final_draft"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2026/02",
+    "title": "Final Report on Guidelines on proportionate retail diversification methods under Article 123(1) of Regulation (EU) No 575/2013",
+    "publication_date": "2026-02-05",
+    "scope": ["BALE_IRB"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "title": "Guidelines on credit risk mitigation for institutions applying the IRB approach with own estimates of LGDs",
+    "scope": ["BALE_IRB"],
+    "risk_parameters": ["LGD"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2016/07",
+    "title": "Orientations sur l'application de la définition du défaut au titre de l'article 178 du règlement (UE) n° 575/2013",
+    "publication_date": "2017-01-18",
+    "scope": ["BALE_IRB"],
+    "language": "FR",
+    "legal_status": "to_verify"
+}
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2019/03",
+    "title": "Orientations sur les estimations de perte en cas de défaut (LGD) appropriées dans l’hypothèse d’un ralentissement économique",
+    "publication_date": "2019-03-06",
+    "scope": ["BALE_IRB"],
+    "risk_parameters": ["LGD"],
+    "language": "FR",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2017/16",
+    "title": "Guidelines on PD estimation, LGD estimation and the treatment of defaulted exposures",
+    "publication_date": "2017-11-20",
+    "scope": ["BALE_IRB"],
+    "risk_parameters": ["PD", "LGD"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2017/16",
+    "title": "Orientations sur les estimations de probabilité de défaut (PD), les estimations de perte en cas de défaut (LGD) et sur le traitement des expositions sur lesquelles il y a eu défaut",
+    "publication_date": "2018-04-23",
+    "scope": ["BALE_IRB"],
+    "risk_parameters": ["PD", "LGD"],
+    "language": "FR",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "ECB",
+    "document_type": "GUIDE",
+    "title": "Guide relatif aux inspections sur place et aux enquêtes sur les modèles internes",
+    "scope": ["BALE_IRB"],
+    "language": "FR",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "European Union",
+    "document_type": "DIRECTIVE",
+    "title": "Directive 2013/36/UE concernant l'accès à l'activité des établissements de crédit et la surveillance prudentielle des établissements de crédit et des entreprises d'investissement",
+    "reference": "Directive 2013/36/UE",
+    "publication_date": "2013-06-26",
+    "scope": ["BASEL_IRB", "ICAAP"],
+    "topics": [
+        "PRUDENTIAL_SUPERVISION",
+        "CREDIT_INSTITUTIONS",
+        "INVESTMENT_FIRMS",
+        "SREP",
+        "CAPITAL_REQUIREMENTS"
+    ],
+    "language": "FR",
+    "legal_status": "to_verify",
+    "version_type": "to_verify"
+}
+
+{
+    "issuer": "European Union",
+    "document_type": "REGULATION",
+    "title": "Règlement (UE) n° 575/2013 concernant les exigences prudentielles applicables aux établissements de crédit et aux entreprises d'investissement",
+    "reference": "Règlement (UE) n° 575/2013",
+    "short_name": "CRR",
+    "publication_date": "2013-06-26",
+    "scope": ["BASEL_IRB", "ICAAP"],
+    "topics": [
+        "CAPITAL_REQUIREMENTS",
+        "IRB",
+        "PD",
+        "LGD",
+        "EAD",
+        "CREDIT_RISK"
+    ],
+    "language": "FR",
+    "legal_status": "to_verify",
+    "version_type": "to_verify"
+}
+{
+    "issuer": "to_verify",
+    "document_type": "EXPLANATORY_PUBLICATION",
+    "title": "Paquet bancaire CRR3/CRD6 : de nouvelles règles pour renforcer la résilience des banques européennes",
+    "publication_date": "2022-03",
+    "scope": ["BASEL_IRB", "ICAAP"],
+    "topics": [
+        "CRR3",
+        "CRD6",
+        "PRUDENTIAL_REQUIREMENTS",
+        "BANKING_RESILIENCE"
+    ],
+    "language": "FR",
+    "legal_status": "not_applicable",
+    "source_url": "to_verify"
+}
+
+# ICCAP
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2016/10",
+    "title": "Guidelines on ICAAP and ILAAP information collected for SREP purposes",
+    "publication_date": "2016-11-03",
+    "scope": ["ICAAP"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "ECB",
+    "document_type": "GUIDE",
+    "title": "Guide de la BCE relatif au processus interne d’évaluation de l’adéquation du capital (ICAAP)",
+    "scope": ["ICAAP"],
+    "language": "FR",
+    "legal_status": "to_verify"
+}
+
+# IFRS9
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2017/06",
+    "title": "Guidelines on credit institutions’ credit risk management practices and accounting for expected credit losses",
+    "publication_date": "2017-05-12",
+    "scope": ["IFRS9"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+
+{
+    "document_type": "ACCOUNTING_STANDARD",
+    "title": "IFRS 9 — Instruments financiers",
+    "reference": "IFRS 9",
+    "scope": ["IFRS9"],
+    "language": "FR",
+    "version_date": "2014-07",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "IASB",
+    "document_type": "POST_IMPLEMENTATION_REVIEW",
+    "title": "Post-implementation Review — IFRS 9 Financial Instruments: Classification and Measurement",
+    "publication_date": "2021-09",
+    "scope": ["IFRS9"],
+    "language": "EN",
+    "legal_status": "consultation",
+    "comment_deadline": "2022-01-28"
+}
+
+{
+  "document_id": "ifrs9_expected_loss_executive_summary",
+  "title": "IFRS 9 and expected loss provisioning — Executive Summary",
+  "issuer": "IASB",
+  "document_type": "EXECUTIVE_SUMMARY",
+  "reference": null,
+  "publication_date": null,
+  "application_date": null,
+  "version": null,
+  "version_type": "to_verify",
+  "language": "EN",
+  "scope": ["IFRS9"],
+  "topics": [
+    "EXPECTED_CREDIT_LOSS",
+    "ECL_PROVISIONING",
+    "CREDIT_RISK"
+  ],
+  "jurisdictions": ["to_verify"],
+  "legal_status": "not_applicable",
+  "verification_status": "to_verify",
+  "source_url": null,
+  "source_type": "to_verify",
+  "original_filename": "to_verify",
+  "last_verified_at": null,
+  "supersedes": [],
+  "superseded_by": [],
+  "related_documents": ["ifrs9_financial_instruments"],
+  "notes": "Résumé exécutif consacré à IFRS 9 et au provisionnement des pertes attendues. L'émetteur, la date et la publication d'origine restent à identifier."
+}
+{
+  "document_id": "ifrs9_financial_instruments_fr",
+  "title": "Norme internationale d'information financière 9 — Instruments financiers",
+  "issuer": "IFRS Foundation",
+  "document_type": "ACCOUNTING_STANDARD",
+  "reference": "IFRS 9",
+  "publication_date": null,
+  "application_date": null,
+  "version": null,
+  "version_type": "to_verify",
+  "language": "FR",
+  "scope": ["IFRS9"],
+  "topics": [
+    "CLASSIFICATION_AND_MEASUREMENT",
+    "IMPAIRMENT",
+    "EXPECTED_CREDIT_LOSS",
+    "FINANCIAL_INSTRUMENTS"
+  ],
+  "jurisdictions": ["international"],
+  "legal_status": "to_verify",
+  "verification_status": "to_verify",
+  "source_url": null,
+  "source_type": "to_verify",
+  "original_filename": "to_verify",
+  "last_verified_at": null,
+  "supersedes": [],
+  "superseded_by": [],
+  "related_documents": [
+    "eu_regulation_2025_1047_ifrs9_ifrs7",
+    "eba_report_2018_ifrs9_implementation"
+  ],
+  "notes": "La langue, l'édition et la source du fichier doivent être confirmées. Si le document correspond à une version adoptée dans le droit de l'Union européenne, préciser le texte européen correspondant et sa date de consolidation."
+}
+{
+  "document_id": "eu_regulation_2025_1047_ifrs9_ifrs7",
+  "title": "Règlement (UE) 2025/1047 de la Commission du 27 mai 2025 modifiant le règlement (UE) 2023/1803 en ce qui concerne les normes internationales d'information financière IFRS 9 et IFRS 7",
+  "issuer": "European Commission",
+  "document_type": "EU_REGULATION",
+  "reference": "Règlement (UE) 2025/1047",
+  "publication_date": null,
+  "adoption_date": "2025-05-27",
+  "application_date": null,
+  "version": "2025-1047",
+  "version_type": "AMENDMENT",
+  "language": "FR",
+  "scope": ["IFRS9"],
+  "topics": [
+    "IFRS9_AMENDMENTS",
+    "IFRS7_AMENDMENTS",
+    "FINANCIAL_INSTRUMENTS",
+    "ACCOUNTING_STANDARDS"
+  ],
+  "jurisdictions": ["European Union"],
+  "legal_status": "to_verify",
+  "verification_status": "partially_verified",
+  "source_url": null,
+  "source_type": "OFFICIAL_LEGAL_ACT",
+  "original_filename": "to_verify",
+  "last_verified_at": null,
+  "supersedes": [],
+  "superseded_by": [],
+  "related_documents": ["ifrs9_financial_instruments_fr"],
+  "notes": "Acte modificatif du règlement (UE) 2023/1803 relatif à l'adoption de certaines normes comptables internationales dans l'Union européenne. Vérifier la date de publication au Journal officiel, les dispositions d'entrée en vigueur et d'application, ainsi que les éventuelles options d'application anticipée."
+}
+{
+  "document_id": "expected_credit_loss_management_guidelines_2025",
+  "title": "Ligne directrice sur la gestion des pertes de crédit attendues",
+  "issuer": null,
+  "document_type": "GUIDELINES",
+  "reference": null,
+  "publication_date": "2025-12",
+  "application_date": null,
+  "version": "2025-12",
+  "version_type": "to_verify",
+  "language": "FR",
+  "scope": ["IFRS9"],
+  "topics": [
+    "EXPECTED_CREDIT_LOSS",
+    "ECL_PROVISIONING",
+    "CREDIT_RISK_MANAGEMENT"
+  ],
+  "jurisdictions": ["to_verify"],
+  "legal_status": "to_verify",
+  "verification_status": "to_verify",
+  "source_url": null,
+  "source_type": "to_verify",
+  "original_filename": "to_verify",
+  "last_verified_at": null,
+  "supersedes": [],
+  "superseded_by": [],
+  "related_documents": [
+    "ifrs9_financial_instruments_fr",
+    "eba_report_2018_ifrs9_implementation"
+  ],
+  "notes": "Le titre et la date de décembre 2025 proviennent des informations disponibles. Identifier l'organisme émetteur, la référence officielle et la portée juridique avant d'utiliser ce document comme source d'exigences applicables."
+}
+{
+  "document_id": "eba_report_2018_ifrs9_implementation",
+  "title": "First observations on the impact and implementation of IFRS 9 by EU institutions",
+  "issuer": "European Banking Authority",
+  "document_type": "REPORT",
+  "reference": null,
+  "publication_date": "2018-12-20",
+  "application_date": null,
+  "version": "2018-12-20",
+  "version_type": "ORIGINAL",
+  "language": "EN",
+  "scope": ["IFRS9"],
+  "topics": [
+    "IFRS9_IMPLEMENTATION",
+    "EXPECTED_CREDIT_LOSS",
+    "EU_INSTITUTIONS",
+    "CREDIT_RISK"
+  ],
+  "jurisdictions": ["European Union"],
+  "legal_status": "not_applicable",
+  "verification_status": "partially_verified",
+  "source_url": null,
+  "source_type": "SUPERVISORY_REPORT",
+  "original_filename": "to_verify",
+  "last_verified_at": null,
+  "supersedes": [],
+  "superseded_by": [],
+  "related_documents": [
+    "ifrs9_financial_instruments_fr",
+    "expected_credit_loss_management_guidelines_2025"
+  ],
+  "notes": "Rapport de l'EBA publié le 20 décembre 2018 sur les premières observations relatives à l'impact et à la mise en œuvre d'IFRS 9 dans les établissements de l'Union européenne. Publication informative, distincte de la norme comptable elle-même."
+}
+
+
+{
+  "document_id": "banque_france_bulletin_237_scenarios_transition_climatique_2021",
+  "title": "Élaborer des scénarios de transition climatique pour gérer les risques financiers",
+  "issuer": "Banque de France",
+  "document_type": "BULLETIN_ARTICLE",
+  "reference": "Bulletin de la Banque de France n° 237/9",
+  "publication_date": "2021-09",
+  "version": "2021-09",
+  "version_type": "ORIGINAL",
+  "language": "FR",
+  "scope": [
+    "STRESS_TEST"
+  ],
+  "topics": [
+    "CLIMATE_RISK",
+    "TRANSITION_RISK",
+    "CLIMATE_SCENARIOS",
+    "SCENARIO_ANALYSIS",
+    "FINANCIAL_RISK_MANAGEMENT",
+    "STRESS_TESTING"
+  ],
+  "jurisdictions": [
+    "France",
+    "European Union"
+  ],
+  "legal_status": "NOT_APPLICABLE",
+  "verification_status": "TO_VERIFY",
+  "source_url": null,
+  "source_type": "CENTRAL_BANK_PUBLICATION",
+  "original_filename": "TO_VERIFY",
+  "last_verified_at": null,
+  "supersedes": [],
+  "superseded_by": [],
+  "related_documents": [
+    "ecb_report_climate_nature_risk_stress_testing",
+    "ecb_ssm_climate_risk_stress_test_2022"
+  ],
+  "notes": "Article de publication institutionnelle à visée informative et méthodologique, et non texte réglementaire contraignant. Utile pour le périmètre STRESS_TEST, notamment pour la construction de scénarios de transition climatique et l'analyse des risques financiers. Vérifier le titre exact, la date, le numéro du bulletin et l'URL officielle avant ingestion."
+}
+# STRESS_TESTING
+
+{
+    "document_type": "METHODOLOGY_NOTE",
+    "title": "2027 EU-WIDE STRESS TEST — Draft Methodological Note",
+    "publication_date": "2026-06-11",
+    "scope": ["STRESS_TEST"],
+    "language": "EN",
+    "legal_status": "draft"
+}
+
+{
+    "document_type": "TEMPLATE_GUIDANCE",
+    "title": "2027 EU-WIDE STRESS TEST — Draft Template Guidance",
+    "publication_date": "2026-06-11",
+    "scope": ["STRESS_TEST"],
+    "language": "EN",
+    "legal_status": "draft"
+}
+
+{
+    "issuer": "BCBS",
+    "document_type": "CONSULTATIVE_DOCUMENT",
+    "title": "Stress testing principles",
+    "publication_date": "2017-12",
+    "comment_deadline": "2018-03-23",
+    "scope": ["STRESS_TEST"],
+    "language": "EN",
+    "legal_status": "consultation"
+}
+
+{
+    "issuer": "BCBS",
+    "document_type": "PRINCIPLES",
+    "title": "Stress testing principles",
+    "publication_date": "2018-10",
+    "scope": ["STRESS_TEST"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+{
+    "issuer": "Banque de France",
+    "document_type": "BULLETIN_ARTICLE",
+    "title": "Élaborer des scénarios de transition climatique pour gérer les risques financiers",
+    "reference": "Bulletin de la Banque de France 237/9",
+    "publication_date": "2021-09/2021-10",
+    "scope": ["STRESS_TEST"],
+    "topics": ["CLIMATE_RISK", "TRANSITION_RISK", "SCENARIO_ANALYSIS"],
+    "language": "FR",
+    "legal_status": "not_applicable"
+}
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "title": "Guidelines (revised) on common procedures and methodologies for the supervisory review and evaluation process (SREP) and supervisory stress testing under Directive 2013/36/EU",
+    "reference": "EBA/GL/2026/06",
+    "publication_date": "2026-06-26",
+    "scope": ["STRESS_TEST", "ICAAP"],
+    "topics": ["SREP", "SUPERVISORY_STRESS_TESTING"],
+    "language": "EN",
+    "legal_status": "to_verify"
+}
+
+{
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "title": "Orientations sur les tests de résistance des établissements",
+    "reference": "EBA/GL/2018/04",
+    "publication_date": "2018-07-19",
+    "scope": ["STRESS_TEST"],
+    "topics": ["STRESS_TESTING", "INSTITUTIONS"],
+    "language": "FR",
+    "legal_status": "to_verify"
+}
+
+
+{
+    "issuer": "ECB",
+    "document_type": "REPORT",
+    "title": "ECB report on good practices for climate and nature-related risk stress testing",
+    "publication_date": "2021-10",
+    "scope": ["STRESS_TEST"],
+    "topics": ["CLIMATE_RISK", "NATURE_RISK", "STRESS_TESTING"],
+    "language": "EN",
+    "legal_status": "not_applicable"
+}
+{
+    "issuer": "ECB",
+    "document_type": "STRESS_TEST",
+    "title": "Climate risk stress test — SSM stress test 2022",
+    "publication_date": "2022",
+    "scope": ["STRESS_TEST"],
+    "topics": ["CLIMATE_RISK", "SSM", "CLIMATE_SCENARIOS"],
+    "language": "EN",
+    "legal_status": "not_applicable"
+}
