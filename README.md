@@ -15,6 +15,6 @@ Le projet s’appuie sur un corpus de documents réglementaires et de publicatio
 
 Les sources proviennent notamment de l’**EBA, de la BCE, du Comité de Bâle, de la Banque de France et de la Fondation IFRS**.
 
-Les documents sont conservés dans leur format brut, puis préparés pour l’indexation. Un fichier de métadonnées (`documents.jsonl`) centralise les informations utiles à leur identification, leur classement et leur traçabilité : source, date, langue, domaine, statut et URL officielle.
+Les documents sont conservés dans leur format brut, puis préparés pour l’indexation. Un fichier de métadonnées (`corpus_metadonnees.jsonl`) centralise les informations utiles à leur identification, leur classement et leur traçabilité : source, date, langue, domaine, statut et URL officielle.
 
 L’objectif est de permettre à l’assistant de retrouver les passages pertinents et de **fournir des réponses sourcées, vérifiables et contextualisées**.
