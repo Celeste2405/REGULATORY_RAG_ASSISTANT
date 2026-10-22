@@ -18,3 +18,94 @@ Les sources proviennent notamment de l’**EBA, de la BCE, du Comité de Bâle, 
 Les documents sont conservés dans leur format brut, puis préparés pour l’indexation. Un fichier de métadonnées (`corpus_metadonnees.jsonl`) centralise les informations utiles à leur identification, leur classement et leur traçabilité : source, date, langue, domaine, statut et URL officielle.
 
 L’objectif est de permettre à l’assistant de retrouver les passages pertinents et de **fournir des réponses sourcées, vérifiables et contextualisées**.
+
+
+## Construction de la pipeline d'ingestion des pdf
+
+### 1. Création du fichier json avec les métadonnées
+Les **métadonnées** sont des informations qui décrivent et permettent de contextualiser chaque document du corpus, comme sa source, sa date, son domaine, sa langue ou son statut réglementaire. Elles servent à **organiser les documents, améliorer la pertinence de la recherche dans le RAG et assurer la traçabilité des réponses** en permettant notamment de retrouver le document et la page à l’origine d’une information. Je les crée à partir des informations disponibles sur chaque document (titre, référence, organisme émetteur, date, type, domaine, etc.), puis je les centralise dans un fichier `documents.jsonl`. Lors de l’ingestion, ces métadonnées sont ensuite associées aux chunks correspondants afin d’être conservées dans ChromaDB.
+
+### 2. Chargement des documents
+
+Cette étape parcourt automatiquement les différents dossiers, charge chaque PDF page par page avec `PyPDFLoader` et regroupe l’ensemble des pages dans une liste de documents LangChain. Les métadonnées associées aux pages sont conservées afin de pouvoir retracer leur document source. Cette étape constitue la base de la pipeline avant le **découpage en chunks**, la création des **embeddings** et l’indexation dans **ChromaDB**.
+
+### 3. Découpage en chunks
+
+Les pages extraites sont ensuite découpées en **chunks** à l’aide de `RecursiveCharacterTextSplitter`. Chaque chunk contient jusqu’à **1 200 caractères**, avec un chevauchement de **200 caractères** entre deux chunks consécutifs afin de préserver le contexte. Le découpage privilégie les frontières naturelles du texte (`paragraphes`, `lignes`, `phrases`, puis espaces). Les métadonnées des pages sont conservées et associées aux chunks, permettant de retrouver leur document et leur page d’origine avant la création des embeddings. 
+
+Le découpage utilise une taille de **1 200 caractères** (environ 250–300 tokens), choisie comme compromis entre la conservation du contexte réglementaire et la précision de la recherche sémantique. Un **chevauchement de 200 caractères** est utilisé afin de limiter la perte de contexte lorsque les phrases ou dispositions sont réparties entre deux chunks. Ces paramètres pourront être ajustés ou calibrés selon les besoin a la phase de test
+
+### 4. Enrichissement des chunks avec les métadonnées
+
+Chaque chunk est enrichi à partir du fichier `data/corpus_metadata.json`. Le script identifie le fichier d’origine à partir de ses métadonnées de chargement, construit une clé correspondant à son chemin relatif dans `data/processed/`, puis recherche les informations associées dans le registre. Il ajoute ainsi à chaque chunk son identifiant documentaire, son titre, son émetteur, sa référence réglementaire, son domaine et son URL source. Une vérification permet enfin de repérer les documents dont les métadonnées n’ont pas été retrouvées. Cet enrichissement facilite le filtrage des résultats et la traçabilité des réponses du RAG.
+
+### 5. Indexation dans ChromaDB
+
+Les chunks enrichis sont ensuite indexés dans une **base vectorielle ChromaDB persistante**. Un modèle `all-MiniLM-L6-v2` est utilisé pour générer automatiquement les embeddings des textes. Pour chaque chunk, le texte, son embedding et ses métadonnées sont stockés dans la collection `regulatory_docs`. L’indexation est réalisée par **lots de 500 chunks** afin de limiter la charge mémoire. ChromaDB permet ainsi de conserver les documents et leurs représentations vectorielles pour effectuer ensuite une **recherche sémantique** à partir des questions de l’utilisateur.
+
+## Construction de la RAG chain
+
+La dernière étape consiste à construire la chaîne RAG permettant de répondre aux questions de l’utilisateur à partir du corpus réglementaire indexé dans ChromaDB. Le fonctionnement repose sur quatre étapes principales : **retrieval, construction du contexte, génération de la réponse et restitution des sources**.
+
+### 1. Recherche des documents pertinents
+
+La collection `regulatory_docs` est chargée depuis la base ChromaDB persistante. Lorsqu’une question est posée, le retriever utilise le modèle `all-MiniLM-L6-v2` pour représenter la requête sous forme vectorielle et rechercher les chunks sémantiquement les plus proches dans la base.
+
+Par défaut, les **5 chunks les plus pertinents** sont récupérés. Pour chacun d’eux, le système conserve à la fois le contenu textuel et les métadonnées associées au document (`title`, `reference`, `source_url`, etc.).
+
+### 2. Construction du contexte
+
+Les chunks récupérés sont ensuite regroupés pour constituer le contexte transmis au LLM. Chaque extrait est précédé des informations permettant d’identifier sa source :
+
+```text
+[Titre du document – Référence]
+
+Contenu de l’extrait
+```
+
+Cette étape permet de conserver le lien entre le contenu utilisé pour répondre à la question et le document réglementaire dont il provient.
+
+### 3. Génération de la réponse
+
+Le contexte récupéré et la question de l’utilisateur sont injectés dans un prompt destiné au LLM `openai/gpt-oss-120b`, utilisé via Groq.
+
+Le prompt impose plusieurs règles afin de rendre les réponses adaptées à un usage réglementaire :
+
+- répondre uniquement à partir des extraits fournis ;
+- signaler explicitement lorsqu’une information n’est pas présente dans le contexte ;
+- citer les documents utilisés sous la forme `[Titre – Référence]`.
+
+La température du modèle est fixée à `0` afin de privilégier des réponses déterministes et reproductibles.
+
+### 4. Restitution des sources
+
+La fonction `ask()` retourne finalement deux éléments : la **réponse générée** et la **liste des sources utilisées**. Pour chaque document, le système restitue son titre, sa référence et, lorsqu’elle est disponible, son URL officielle.
+
+La réponse peut ainsi être vérifiée et replacée dans son contexte documentaire, ce qui constitue un élément essentiel pour une application d’intelligence réglementaire.
+
+## Interface utilisateur avec Streamlit
+
+L'application est déployée sous la forme d'une interface web développée avec **Streamlit**.
+
+L'interface propose une zone de saisie pour la question de l'utilisateur. Lorsqu'une question est renseignée, elle est transmise à la fonction `ask()` de `src/rag_chain.py`, qui exécute la chaîne RAG.
+
+L'interface affiche ensuite séparément la **réponse générée** et les **documents utilisés**. Pour chaque source, le titre et la référence réglementaire sont affichés et, lorsqu'une URL officielle est disponible, le titre devient un lien cliquable vers le document source.
+
+
+```text
+Question utilisateur
+        ↓
+Interface Streamlit
+        ↓
+      ask()
+        ↓
+Recherche ChromaDB
+        ↓
+Construction du contexte
+        ↓
+LLM
+        ↓
+Réponse + sources
+        ↓
+Affichage Streamlit
+```
