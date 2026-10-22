@@ -109,3 +109,26 @@ Réponse + sources
         ↓
 Affichage Streamlit
 ```
+
+## Tests et validation
+
+Des tests automatisés avec **Pytest** permettent de vérifier le bon fonctionnement de la pipeline RAG et la qualité de l'index documentaire.
+
+Une fixture commune établit une connexion à la collection `regulatory_docs` de ChromaDB en utilisant le même modèle d'embeddings `all-MiniLM-L6-v2` que lors de l'indexation.
+
+Plusieurs contrôles sont réalisés :
+
+- **Volume de l'index** : vérification que la collection contient plus de 10 000 chunks ;
+- **Métadonnées** : vérification de la présence d'informations essentielles telles que `document_id` et `issuer` ;
+- **Classification documentaire** : vérification que les résultats associés aux requêtes Stress Test et IFRS 9 possèdent bien les scopes correspondants ;
+- **Pipeline de bout en bout** : lorsqu'une clé API Groq est disponible, une question est envoyée à la RAG complète et le test vérifie qu'une réponse ainsi que des sources sont retournées.
+
+Ces tests permettent de détecter les erreurs d'ingestion, d'enrichissement des métadonnées, d'indexation ou de fonctionnement de la chaîne RAG avant son utilisation dans l'interface utilisateur.
+
+## Conclusion, limites et perspectives
+
+Ce projet met en œuvre un assistant d’intelligence réglementaire basé sur une architecture **RAG**, combinant recherche sémantique et génération de réponses sourcées sur Bâle/IRB, IFRS 9, stress tests et ICAAP.
+
+Le prototype présente certaines limites, notamment la couverture du corpus, la pertinence des extraits récupérés et la nécessité de vérifier les réponses générées. Des améliorations pourraient porter sur l’évaluation de la qualité du retrieval, le reranking des résultats et la gestion des versions réglementaires.
+
+À terme, cette solution pourrait être adaptée aux besoins des banques en intégrant leurs **livres blancs, procédures internes, documentations de modèles et supports de formation**. Elle faciliterait ainsi la recherche documentaire, le partage des connaissances et la montée en compétence des équipes risque et conformité, tout en centralisant l’accès à des informations internes et réglementaires.
