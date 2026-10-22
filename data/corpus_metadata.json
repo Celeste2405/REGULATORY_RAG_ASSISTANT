@@ -1,0 +1,791 @@
+{
+  "bale_irb/ACPR_NOTICE_2024_RATIOS_PRUDENTIELS_MREL_FR.pdf": {
+    "document_id": "acpr_notice_2024_ratios_prudentiels_mrel",
+    "title": "Notice relative aux modalités de calcul et de publication des ratios prudentiels dans le cadre du dispositif MREL",
+    "issuer": "ACPR",
+    "document_type": "NOTICE",
+    "reference": "to_verify",
+    "publication_date": "2024",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "CAPITAL_RATIOS",
+      "MREL",
+      "PRUDENTIAL_REQUIREMENTS"
+    ],
+    "legal_status": "guidance",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Notice ACPR 2024 sur les ratios prudentiels et MREL"
+  },
+  "bale_irb/BCBS_BASEL_FRAMEWORK_PRUDENTIAL_STANDARDS_EN.pdf": {
+    "document_id": "bcbs_basel_framework_prudential_standards",
+    "title": "The Basel Framework — Prudential Standards",
+    "issuer": "BCBS",
+    "document_type": "FRAMEWORK",
+    "reference": "BCF",
+    "publication_date": "to_verify",
+    "language": "EN",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "CAPITAL_REQUIREMENTS",
+      "CREDIT_RISK",
+      "MARKET_RISK",
+      "OPERATIONAL_RISK",
+      "IRB_APPROACH"
+    ],
+    "legal_status": "international_standard",
+    "verification_status": "to_verify",
+    "source_url": "https://www.bis.org/basel_framework/",
+    "notes": "Document de référence consolidé du cadre prudentiel Bâlois (BIS)"
+  },
+  "bale_irb/EBA_GL_2014_13_SREP_FR.pdf": {
+    "document_id": "eba_gl_2014_13_srep",
+    "title": "Orientations relatives aux procédures et méthodologies communes pour le processus de contrôle et d'évaluation prudentiels (SREP) et les mesures et processus dans le cadre du pilier 2",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2014/13",
+    "publication_date": "2014-12-19",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB",
+      "ICCAP"
+    ],
+    "topics": [
+      "SREP",
+      "CAPITAL_ADEQUACY",
+      "SUPERVISORY_REVIEW",
+      "PILLAR_2"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/supervisory-review-and-evaluation-srep-and-pillar-2/guidelines-for-common-procedures-and-methodologies-for-the-supervisory-review-and-evaluation-process-srep",
+    "notes": "Orientations SREP de référence — remplacées partiellement par les GL 2022"
+  },
+  "bale_irb/EBA_GL_2016_07_DEFAULT_DEFINITION_FR.pdf": {
+    "document_id": "eba_gl_2016_07_default_definition",
+    "title": "Orientations relatives à l'application de la définition du défaut au sens de l'article 178 du règlement (UE) n° 575/2013",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2016/07",
+    "publication_date": "2016-09-28",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "DEFAULT_DEFINITION",
+      "CREDIT_RISK",
+      "IRB_APPROACH",
+      "ARTICLE_178"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/credit-risk/guidelines-on-the-application-of-the-definition-of-default",
+    "notes": "Définition réglementaire du défaut pour l'approche IRB"
+  },
+  "bale_irb/EBA_GL_2017_16_PD_LGD_DEFAULTED_EXPOSURES_EN.pdf": {
+    "document_id": "eba_gl_2017_16_pd_lgd_defaulted_en",
+    "title": "Guidelines on PD estimation, LGD estimation and the treatment of defaulted exposures",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2017/16",
+    "publication_date": "2017-11-20",
+    "language": "EN",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "PD_ESTIMATION",
+      "LGD_ESTIMATION",
+      "DEFAULTED_EXPOSURES",
+      "IRB_APPROACH",
+      "CALIBRATION"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/credit-risk/guidelines-on-pd-lgd-estimation-and-treatment-of-defaulted-exposures",
+    "notes": "Version anglaise — voir aussi version FR dans le même dossier"
+  },
+  "bale_irb/EBA_GL_2017_16_PD_LGD_DEFAULTED_EXPOSURES_FR.pdf": {
+    "document_id": "eba_gl_2017_16_pd_lgd_defaulted_fr",
+    "title": "Orientations sur l'estimation de la PD, l'estimation de la LGD et le traitement des expositions en défaut",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2017/16",
+    "publication_date": "2017-11-20",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "PD_ESTIMATION",
+      "LGD_ESTIMATION",
+      "DEFAULTED_EXPOSURES",
+      "IRB_APPROACH",
+      "CALIBRATION"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/credit-risk/guidelines-on-pd-lgd-estimation-and-treatment-of-defaulted-exposures",
+    "notes": "Version française — même contenu que la version EN"
+  },
+  "bale_irb/EBA_GL_2019_03_DOWNTURN_LGD_FR.pdf": {
+    "document_id": "eba_gl_2019_03_downturn_lgd",
+    "title": "Orientations sur l'estimation de la LGD appropriée pour un ralentissement économique (LGD en période de ralentissement)",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2019/03",
+    "publication_date": "2019-03-06",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "LGD_ESTIMATION",
+      "DOWNTURN_LGD",
+      "IRB_APPROACH",
+      "ECONOMIC_DOWNTURN"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/credit-risk/guidelines-on-estimation-of-downturn-lgd",
+    "notes": "LGD downturn — complément des GL 2017/16"
+  },
+  "bale_irb/EBA_GL_2026_02_RETAIL_DIVERSIFICATION_EN.pdf": {
+    "document_id": "eba_gl_2026_02_retail_diversification",
+    "title": "Guidelines on the application of the retail diversification criterion in the IRB approach",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2026/02",
+    "publication_date": "2026",
+    "language": "EN",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "RETAIL_EXPOSURES",
+      "DIVERSIFICATION",
+      "IRB_APPROACH",
+      "PORTFOLIO_COMPOSITION"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Orientations 2026 sur le critère de diversification retail dans l'approche IRB"
+  },
+  "bale_irb/EBA_GL_AMENDMENT_DEFAULT_DEFINITION_EN.pdf": {
+    "document_id": "eba_gl_amendment_default_definition",
+    "title": "Guidelines amending Guidelines EBA/GL/2016/07 on the application of the definition of default",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES_AMENDMENT",
+    "reference": "to_verify",
+    "publication_date": "to_verify",
+    "language": "EN",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "DEFAULT_DEFINITION",
+      "CREDIT_RISK",
+      "IRB_APPROACH"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Amendement aux GL 2016/07 sur la définition du défaut — référence exacte à vérifier"
+  },
+  "bale_irb/EBA_GL_CREDIT_RISK_MITIGATION_IRB_OWN_LGD_EN.pdf": {
+    "document_id": "eba_gl_credit_risk_mitigation_irb_own_lgd",
+    "title": "Guidelines on credit risk mitigation for institutions applying the IRB approach with own estimates of LGD",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "to_verify",
+    "publication_date": "to_verify",
+    "language": "EN",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "CREDIT_RISK_MITIGATION",
+      "IRB_APPROACH",
+      "LGD_ESTIMATION",
+      "COLLATERAL"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Atténuation du risque de crédit pour les établissements IRB avec estimation propre de la LGD"
+  },
+  "bale_irb/EBA_RTS_IRB_APPROACH_ASSESSMENT_METHODOLOGY_EN.pdf": {
+    "document_id": "eba_rts_irb_approach_assessment_methodology",
+    "title": "Regulatory Technical Standards on the assessment methodology for the IRB approach",
+    "issuer": "EBA",
+    "document_type": "RTS",
+    "reference": "to_verify",
+    "publication_date": "to_verify",
+    "language": "EN",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "IRB_APPROACH",
+      "ASSESSMENT_METHODOLOGY",
+      "MODEL_VALIDATION",
+      "SUPERVISORY_REVIEW"
+    ],
+    "legal_status": "binding",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "RTS sur la méthodologie d'évaluation de l'approche IRB — référence exacte à vérifier"
+  },
+  "bale_irb/ECB_GUIDE_EGMA_INTERNAL_MODELS_IMM_ACVA_FR.pdf": {
+    "document_id": "ecb_guide_egma_internal_models_imm_acva",
+    "title": "Guide relatif aux modèles internes — chapitres IMM et ACVA (Évaluation générale étendue des modèles)",
+    "issuer": "ECB",
+    "document_type": "GUIDE",
+    "reference": "to_verify",
+    "publication_date": "to_verify",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "INTERNAL_MODELS",
+      "IMM",
+      "CVA",
+      "COUNTERPARTY_CREDIT_RISK",
+      "MODEL_VALIDATION"
+    ],
+    "legal_status": "guidance",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Guide BCE sur les modèles IMM (Internal Model Method) et ACVA — partie du programme TRIM ou EGMA"
+  },
+  "bale_irb/ECB_GUIDE_ONSITE_INSPECTIONS_INTERNAL_MODELS_FR.pdf": {
+    "document_id": "ecb_guide_onsite_inspections_internal_models",
+    "title": "Guide relatif aux inspections sur place et aux enquêtes sur les modèles internes",
+    "issuer": "ECB",
+    "document_type": "GUIDE",
+    "reference": "to_verify",
+    "publication_date": "to_verify",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "ONSITE_INSPECTIONS",
+      "INTERNAL_MODELS",
+      "SUPERVISORY_REVIEW",
+      "MODEL_VALIDATION"
+    ],
+    "legal_status": "guidance",
+    "verification_status": "to_verify",
+    "source_url": "https://www.bankingsupervision.europa.eu/ecb/pub/guides/html/index.en.html",
+    "notes": "Guide BCE sur les inspections sur place et investigations des modèles internes"
+  },
+  "bale_irb/EU_BANKING_PACKAGE_CRR3_CRD6_OVERVIEW_FR.pdf": {
+    "document_id": "eu_banking_package_crr3_crd6_overview",
+    "title": "Paquet bancaire 2024 : vue d'ensemble du CRR3 et de la CRD6 (Bâle IV)",
+    "issuer": "European Parliament",
+    "document_type": "OVERVIEW",
+    "reference": "Règlement (UE) 2024/1623 / Directive (UE) 2024/1619",
+    "publication_date": "2024",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "CRR3",
+      "CRD6",
+      "CAPITAL_REQUIREMENTS",
+      "BASEL_IV",
+      "OUTPUT_FLOOR"
+    ],
+    "legal_status": "regulatory_overview",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Vue d'ensemble du paquet bancaire CRR3/CRD6 transposant Bâle IV en droit européen"
+  },
+  "bale_irb/EU_DIRECTIVE_2013_36_EU_CRD_IV_FR.pdf": {
+    "document_id": "eu_directive_2013_36_eu_crd_iv",
+    "title": "Directive 2013/36/UE concernant l'accès à l'activité des établissements de crédit et la surveillance prudentielle des établissements de crédit et des entreprises d'investissement (CRD IV)",
+    "issuer": "European Parliament",
+    "document_type": "DIRECTIVE",
+    "reference": "2013/36/UE",
+    "publication_date": "2013-06-26",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "CRD_IV",
+      "CAPITAL_REQUIREMENTS",
+      "BANKING_SUPERVISION",
+      "PILLAR_2"
+    ],
+    "legal_status": "binding",
+    "verification_status": "verified",
+    "source_url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32013L0036",
+    "notes": "Directive CRD IV — texte législatif de référence côté supervision"
+  },
+  "bale_irb/EU_REGULATION_575_2013_CRR_FR.pdf": {
+    "document_id": "eu_regulation_575_2013_crr",
+    "title": "Règlement (UE) n° 575/2013 concernant les exigences prudentielles applicables aux établissements de crédit et aux entreprises d'investissement (CRR)",
+    "issuer": "European Parliament",
+    "document_type": "REGULATION",
+    "reference": "(UE) n° 575/2013",
+    "publication_date": "2013-06-26",
+    "language": "FR",
+    "scope": [
+      "BALE_IRB"
+    ],
+    "topics": [
+      "CRR",
+      "CAPITAL_REQUIREMENTS",
+      "CREDIT_RISK",
+      "MARKET_RISK",
+      "IRB_APPROACH"
+    ],
+    "legal_status": "binding",
+    "verification_status": "verified",
+    "source_url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32013R0575",
+    "notes": "CRR — règlement prudentiel de référence pour les exigences de fonds propres"
+  },
+  "iccap/EBA_GL_2016_10_ICAAP_ILAAP_SREP_EN.pdf": {
+    "document_id": "eba_gl_2016_10_icaap_ilaap_srep",
+    "title": "Guidelines on ICAAP and ILAAP information collected for SREP purposes",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2016/10",
+    "publication_date": "2016-11-03",
+    "language": "EN",
+    "scope": [
+      "ICCAP"
+    ],
+    "topics": [
+      "ICAAP",
+      "ILAAP",
+      "SREP",
+      "CAPITAL_ADEQUACY",
+      "LIQUIDITY"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/supervisory-review-and-evaluation-srep-and-pillar-2/guidelines-on-icaap-and-ilaap-information-collected-for-srep-purposes",
+    "notes": "Orientations sur les informations ICAAP/ILAAP transmises dans le cadre du SREP"
+  },
+  "iccap/ECB_GUIDE_ICAAP_FR.pdf": {
+    "document_id": "ecb_guide_icaap",
+    "title": "Guide relatif au processus interne d'évaluation de l'adéquation du capital (ICAAP)",
+    "issuer": "ECB",
+    "document_type": "GUIDE",
+    "reference": "to_verify",
+    "publication_date": "2018",
+    "language": "FR",
+    "scope": [
+      "ICCAP"
+    ],
+    "topics": [
+      "ICAAP",
+      "CAPITAL_ADEQUACY",
+      "RISK_MANAGEMENT",
+      "INTERNAL_CAPITAL"
+    ],
+    "legal_status": "guidance",
+    "verification_status": "to_verify",
+    "source_url": "https://www.bankingsupervision.europa.eu/ecb/pub/guides/html/index.en.html",
+    "notes": "Guide BCE sur l'ICAAP — publié en novembre 2018 dans le cadre du dialogue prudentiel"
+  },
+  "ifrs9/BANQUE_DE_FRANCE_BLOC_NOTES_439_POLITIQUE_MONETAIRE_2026_FR.pdf": {
+    "document_id": "bdf_bloc_notes_439_politique_monetaire_2026",
+    "title": "Bloc-note Éco n°439 — Politique monétaire 2026",
+    "issuer": "Banque de France",
+    "document_type": "WORKING_PAPER",
+    "reference": "Bloc-note Éco n°439",
+    "publication_date": "2026",
+    "language": "FR",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "MONETARY_POLICY",
+      "MACROECONOMIC_SCENARIOS",
+      "FORWARD_LOOKING_INFORMATION"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/bloc-notes-eco",
+    "notes": "Utilisé pour les scénarios macroéconomiques forward-looking dans la modélisation IFRS 9"
+  },
+  "ifrs9/EBA_GL_2017_06_CREDIT_RISK_ECL_EN.pdf": {
+    "document_id": "eba_gl_2017_06_credit_risk_ecl",
+    "title": "Guidelines on credit institutions' credit risk management practices and accounting for expected credit losses",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2017/06",
+    "publication_date": "2017-10-12",
+    "language": "EN",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "CREDIT_RISK",
+      "EXPECTED_CREDIT_LOSS",
+      "ECL_PROVISIONING",
+      "IFRS9",
+      "STAGING"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/accounting-and-auditing/guidelines-on-credit-institutions-credit-risk-management-practices-and-accounting-for-expected-credit-losses",
+    "notes": "Orientations de référence EBA sur le provisionnement ECL (IFRS 9) — staging, forward-looking, gouvernance"
+  },
+  "ifrs9/EBA_REPORT_2018_IFRS9_IMPACT_IMPLEMENTATION_EU_INSTITUTIONS_EN.pdf": {
+    "document_id": "eba_report_2018_ifrs9_impact_implementation",
+    "title": "First observations on the impact and implementation of IFRS 9 by EU institutions",
+    "issuer": "EBA",
+    "document_type": "REPORT",
+    "reference": "to_verify",
+    "publication_date": "2018",
+    "language": "EN",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "IFRS9",
+      "ECL_PROVISIONING",
+      "IMPLEMENTATION",
+      "CREDIT_RISK",
+      "TRANSITIONAL_ARRANGEMENTS"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Premier rapport d'observation de l'EBA sur l'impact de la mise en œuvre d'IFRS 9 dans les établissements européens"
+  },
+  "ifrs9/EU_REGULATION_2025_1047_IFRS9_IFRS7_AMENDMENTS_FR.pdf": {
+    "document_id": "eu_regulation_2025_1047_ifrs9_ifrs7_amendments",
+    "title": "Règlement (UE) 2025/1047 modifiant le règlement (CE) n° 1126/2008 en ce qui concerne IFRS 9 et IFRS 7",
+    "issuer": "European Commission",
+    "document_type": "REGULATION",
+    "reference": "(UE) 2025/1047",
+    "publication_date": "2025",
+    "language": "FR",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "IFRS9",
+      "IFRS7",
+      "FINANCIAL_INSTRUMENTS",
+      "REGULATORY_AMENDMENT",
+      "ENDORSEMENT"
+    ],
+    "legal_status": "binding",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Règlement d'adoption (endorsement) des amendements IFRS 9 et IFRS 7 dans l'UE"
+  },
+  "ifrs9/GUIDELINES_EXPECTED_CREDIT_LOSS_MANAGEMENT_2025_12_FR.pdf": {
+    "document_id": "gl_expected_credit_loss_management_2025_12",
+    "title": "Orientations relatives à la gestion des pertes de crédit attendues (ECL) — Décembre 2025",
+    "issuer": "to_verify",
+    "document_type": "GUIDELINES",
+    "reference": "to_verify",
+    "publication_date": "2025-12",
+    "language": "FR",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "EXPECTED_CREDIT_LOSS",
+      "ECL_MANAGEMENT",
+      "CREDIT_RISK",
+      "IFRS9"
+    ],
+    "legal_status": "to_verify",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Issuer à identifier — probable EBA, BCE ou ACPR. Orientations ECL publiées en décembre 2025."
+  },
+  "ifrs9/IASB_PIR_2021_IFRS9_CLASSIFICATION_MEASUREMENT_EN.pdf": {
+    "document_id": "iasb_pir_2021_ifrs9_classification_measurement",
+    "title": "Post-Implementation Review of IFRS 9 — Classification and Measurement",
+    "issuer": "IASB",
+    "document_type": "POST_IMPLEMENTATION_REVIEW",
+    "reference": "to_verify",
+    "publication_date": "2021",
+    "language": "EN",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "IFRS9",
+      "CLASSIFICATION",
+      "MEASUREMENT",
+      "FINANCIAL_INSTRUMENTS",
+      "FAIR_VALUE"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "https://www.ifrs.org/projects/completed/post-implementation-reviews/ifrs-9/",
+    "notes": "Revue post-implémentation IASB d'IFRS 9 — volet classification et évaluation"
+  },
+  "ifrs9/IFRS9_EXECUTIVE_SUMMARY_EXPECTED_LOSS_PROVISIONING_EN.pdf": {
+    "document_id": "ifrs9_expected_loss_executive_summary",
+    "title": "IFRS 9 and expected loss provisioning — Executive Summary",
+    "issuer": "IASB",
+    "document_type": "EXECUTIVE_SUMMARY",
+    "reference": null,
+    "publication_date": null,
+    "language": "EN",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "EXPECTED_CREDIT_LOSS",
+      "ECL_PROVISIONING",
+      "CREDIT_RISK",
+      "IFRS9"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": null,
+    "notes": "Résumé exécutif IASB sur le provisionnement ECL dans IFRS 9"
+  },
+  "ifrs9/IFRS_FOUNDATION_IFRS_9_FINANCIAL_INSTRUMENTS_FR.pdf": {
+    "document_id": "ifrs_foundation_ifrs9_financial_instruments",
+    "title": "IFRS 9 Instruments financiers",
+    "issuer": "IFRS Foundation",
+    "document_type": "STANDARD",
+    "reference": "IFRS 9",
+    "publication_date": "2014",
+    "language": "FR",
+    "scope": [
+      "IFRS9"
+    ],
+    "topics": [
+      "IFRS9",
+      "FINANCIAL_INSTRUMENTS",
+      "CLASSIFICATION",
+      "MEASUREMENT",
+      "IMPAIRMENT",
+      "HEDGE_ACCOUNTING",
+      "ECL_PROVISIONING"
+    ],
+    "legal_status": "international_standard",
+    "verification_status": "verified",
+    "source_url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+    "notes": "Norme IFRS 9 complète en version française — applicable depuis le 1er janvier 2018"
+  },
+  "stress_test/BANQUE_DE_FRANCE_BULLETIN_237_9_SCENARIOS_TRANSITION_CLIMATIQUE_2021_FR.pdf": {
+    "document_id": "bdf_bulletin_237_9_scenarios_transition_climatique_2021",
+    "title": "Bulletin de la Banque de France n°237 — Scénarios de transition climatique pour la France",
+    "issuer": "Banque de France",
+    "document_type": "BULLETIN",
+    "reference": "Bulletin n°237, article 9",
+    "publication_date": "2021",
+    "language": "FR",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "CLIMATE_RISK",
+      "TRANSITION_SCENARIOS",
+      "STRESS_TESTING",
+      "PHYSICAL_RISK"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/bulletin-de-la-banque-de-france",
+    "notes": "Scénarios de transition climatique Banque de France — utilisés dans les stress-tests climatiques"
+  },
+  "stress_test/BCBS_CONSULTATIVE_STRESS_TESTING_PRINCIPLES_2017_EN.pdf": {
+    "document_id": "bcbs_consultative_stress_testing_principles_2017",
+    "title": "Stress testing principles — Consultative Document",
+    "issuer": "BCBS",
+    "document_type": "CONSULTATIVE_DOCUMENT",
+    "reference": "to_verify",
+    "publication_date": "2017",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "STRESS_TESTING",
+      "SUPERVISORY_EXPECTATIONS",
+      "RISK_MANAGEMENT",
+      "PRINCIPLES"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "https://www.bis.org/bcbs/publ/",
+    "notes": "Document consultatif BCBS 2017 — précède les principes définitifs de 2018"
+  },
+  "stress_test/BCBS_STRESS_TESTING_PRINCIPLES_2018_EN.pdf": {
+    "document_id": "bcbs_stress_testing_principles_2018",
+    "title": "Stress testing principles",
+    "issuer": "BCBS",
+    "document_type": "PRINCIPLES",
+    "reference": "to_verify",
+    "publication_date": "2018-10",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "STRESS_TESTING",
+      "PRINCIPLES",
+      "SUPERVISORY_EXPECTATIONS",
+      "GOVERNANCE"
+    ],
+    "legal_status": "international_standard",
+    "verification_status": "to_verify",
+    "source_url": "https://www.bis.org/bcbs/publ/d450.htm",
+    "notes": "Principes définitifs BCBS sur les stress tests — remplace les principes de 2009"
+  },
+  "stress_test/EBA_EU_WIDE_STRESS_TEST_2027_DRAFT_METHODOLOGY_EN.pdf": {
+    "document_id": "eba_eu_wide_stress_test_2027_methodology",
+    "title": "EU-wide stress test 2027 — Draft Methodology",
+    "issuer": "EBA",
+    "document_type": "METHODOLOGY",
+    "reference": "to_verify",
+    "publication_date": "2026",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "STRESS_TESTING",
+      "METHODOLOGY",
+      "EU_WIDE_STRESS_TEST",
+      "ADVERSE_SCENARIO",
+      "CAPITAL_PROJECTIONS"
+    ],
+    "legal_status": "supervisory_framework",
+    "verification_status": "to_verify",
+    "source_url": "https://www.eba.europa.eu/risk-analysis-and-data/eu-wide-stress-testing",
+    "notes": "Méthodologie provisoire du stress test EBA 2027 — publié en 2026 pour consultation"
+  },
+  "stress_test/EBA_EU_WIDE_STRESS_TEST_2027_DRAFT_TEMPLATE_GUIDANCE_EN.pdf": {
+    "document_id": "eba_eu_wide_stress_test_2027_template_guidance",
+    "title": "EU-wide stress test 2027 — Draft Template Guidance",
+    "issuer": "EBA",
+    "document_type": "TEMPLATE_GUIDANCE",
+    "reference": "to_verify",
+    "publication_date": "2026",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "STRESS_TESTING",
+      "TEMPLATE_GUIDANCE",
+      "EU_WIDE_STRESS_TEST",
+      "REPORTING"
+    ],
+    "legal_status": "supervisory_framework",
+    "verification_status": "to_verify",
+    "source_url": "https://www.eba.europa.eu/risk-analysis-and-data/eu-wide-stress-testing",
+    "notes": "Guide des modèles de reporting provisoires pour le stress test EBA 2027"
+  },
+  "stress_test/EBA_GL_2018_04_STRESS_TESTING_INSTITUTIONS_FR.pdf": {
+    "document_id": "eba_gl_2018_04_stress_testing_institutions",
+    "title": "Orientations relatives aux stress tests des établissements",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2018/04",
+    "publication_date": "2018-07-19",
+    "language": "FR",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "STRESS_TESTING",
+      "INSTITUTIONS",
+      "RISK_MANAGEMENT",
+      "GOVERNANCE",
+      "SCENARIOS"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "verified",
+    "source_url": "https://www.eba.europa.eu/regulation-and-policy/supervisory-review-and-evaluation-srep-and-pillar-2/guidelines-on-institutions-stress-testing",
+    "notes": "Orientations EBA sur les stress tests des établissements — référence principale pour la gouvernance des stress tests internes"
+  },
+  "stress_test/EBA_GL_2026_06_SREP_SUPERVISORY_STRESS_TESTING_EN.pdf": {
+    "document_id": "eba_gl_2026_06_srep_supervisory_stress_testing",
+    "title": "Guidelines on SREP and supervisory stress testing",
+    "issuer": "EBA",
+    "document_type": "GUIDELINES",
+    "reference": "EBA/GL/2026/06",
+    "publication_date": "2026",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST",
+      "BALE_IRB"
+    ],
+    "topics": [
+      "STRESS_TESTING",
+      "SREP",
+      "SUPERVISORY_STRESS_TESTING",
+      "CAPITAL_ADEQUACY"
+    ],
+    "legal_status": "binding_guidance",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Nouvelles orientations 2026 sur le SREP et les stress tests superviseurs"
+  },
+  "stress_test/ECB_REPORT_CLIMATE_NATURE_RISK_STRESS_TESTING_EN.pdf": {
+    "document_id": "ecb_report_climate_nature_risk_stress_testing",
+    "title": "Report on climate and nature risk stress testing",
+    "issuer": "ECB",
+    "document_type": "REPORT",
+    "reference": "to_verify",
+    "publication_date": "to_verify",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "CLIMATE_RISK",
+      "NATURE_RISK",
+      "STRESS_TESTING",
+      "TRANSITION_RISK",
+      "PHYSICAL_RISK",
+      "BIODIVERSITY"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "to_verify",
+    "notes": "Rapport BCE sur les stress tests couvrant les risques climatiques et naturels (biodiversité)"
+  },
+  "stress_test/ECB_SSM_CLIMATE_RISK_STRESS_TEST_2022_EN.pdf": {
+    "document_id": "ecb_ssm_climate_risk_stress_test_2022",
+    "title": "2022 Climate Risk Stress Test",
+    "issuer": "ECB",
+    "document_type": "REPORT",
+    "reference": "to_verify",
+    "publication_date": "2022-07",
+    "language": "EN",
+    "scope": [
+      "STRESS_TEST"
+    ],
+    "topics": [
+      "CLIMATE_RISK",
+      "STRESS_TESTING",
+      "SSM",
+      "PHYSICAL_RISK",
+      "TRANSITION_RISK",
+      "CREDIT_RISK"
+    ],
+    "legal_status": "not_applicable",
+    "verification_status": "to_verify",
+    "source_url": "https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.climateriskstresstest2022~4b6ec93dbc.en.pdf",
+    "notes": "Résultats du stress test climatique SSM 2022 — exercice pilote BCE auprès de 104 banques importantes"
+  }
+}
