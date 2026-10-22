@@ -1,127 +1,127 @@
-"""Ingestion : PDF -> chunks (512/64) -> embeddings all-MiniLM-L6-v2 -> ChromaDB persistante.
+# Step 1 : Charger les fichiers PDF et les convertir en pages
+import os
+from langchain_community.document_loaders import PyPDFLoader
 
-Usage :
-    python src/ingest.py            # indexe data/processed/**/*.pdf
-    python src/ingest.py --reset    # supprime la collection avant de réindexer
-"""
-import argparse
-import hashlib
-import re
-from datetime import datetime
-from pathlib import Path
+base_dir = "data/processed"
+all_pages = []
 
-import chromadb
-import pymupdf as fitz  # PyMuPDF
+for folder in sorted(os.listdir(base_dir)):
+    folder_path = os.path.join(base_dir, folder)
+    if not os.path.isdir(folder_path):
+        continue
+    for filename in sorted(os.listdir(folder_path)):
+        if not filename.endswith(".pdf"):
+            continue
+        filepath = os.path.join(folder_path, filename)
+        loader = PyPDFLoader(filepath)
+        pages = loader.load()
+        all_pages.extend(pages)
+        print(f"  {folder}/{filename} → {len(pages)} pages")
+
+print(f"\nTotal : {len(all_pages)} pages chargées")
+ # Step 2 : Découper les pages en chunks
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from sentence_transformers import SentenceTransformer
-from tqdm import tqdm
 
-# Paramètres du projet : chemins, collection ChromaDB, modèle d'embeddings, taille des chunks, batch d'indexation
-ROOT = Path(__file__).resolve().parent.parent
-PDF_DIR = ROOT / "data" / "processed"
-CHROMA_DIR = ROOT / "data" / "chromadb"
-COLLECTION = "regulatory_docs"
-EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-CHUNK_SIZE, CHUNK_OVERLAP = 512, 64
-BATCH = 64
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1200,    # caractères (≈ 250-300 tokens)
+    chunk_overlap=200,
+    separators=["\n\n", "\n", ".", " ", ""]
+)
 
-# "Article 178", "Art. 12a", "Article premier" en début de ligne = titre d'article
-ARTICLE_HEADING = re.compile(r"^\s*(?:Article|Art\.)\s+(\d+[a-z]?)\b", re.M | re.I)
-ARTICLE_ANY = re.compile(r"\b(?:Article|Art\.)\s+(\d+[a-z]?)\b", re.I)
-FILENAME_YEAR = re.compile(r"(?:^|_)((?:19|20)\d{2})(?:_|\.|$)")
+chunks = splitter.split_documents(all_pages)
+
+print(f"Pages chargées  : {len(all_pages)}")
+print(f"Chunks produits : {len(chunks)}")
+print(f"\nExemple — chunk 0 :")
+print(chunks[0].page_content[:300])
+print(f"\nMétadonnées : {chunks[0].metadata}")
 
 
-def doc_date(meta: dict, path: Path) -> str:
-    """Date du document : métadonnée PDF (creationDate 'D:YYYYMMDD...'), sinon année du nom de fichier."""
-    m = re.match(r"D:(\d{4})(\d{2})(\d{2})", (meta or {}).get("creationDate") or "")
-    if m:
-        return "-".join(m.groups())
-    m = FILENAME_YEAR.search(path.name)
-    return m.group(1) if m else ""
+# Step 3 : Enrichir les chunks avec les métadonnées du corpus
+import json
 
+# Charger les métadonnées
+with open("data/corpus_metadata.json", "r", encoding="utf-8") as f:
+    corpus_metadata = json.load(f)
 
-def load_pdf(path: Path):
-    """Retourne (pages[(num, texte)], date). PyMuPDF : ~100x plus rapide que PyPDF2."""
-    pages = []
-    with fitz.open(path) as pdf:
-        for i, page in enumerate(pdf, start=1):
-            text = page.get_text()
-            if text.strip():
-                pages.append((i, text))
-        date = doc_date(pdf.metadata, path)
-    return pages, date
+# Enrichir chaque chunk
+not_found = set()
 
+for chunk in chunks:
+    source = chunk.metadata.get("source", "")
+    # Normalise les backslashes Windows → forward slashes
+    parts = source.replace("\\", "/").split("/")
+    # source = "data/processed/bale_irb/fichier.pdf" → key = "bale_irb/fichier.pdf"
+    try:
+        idx = parts.index("processed")
+        key = "/".join(parts[idx+1:idx+3])
+    except ValueError:
+        key = ""
 
-def chunk_document(path: Path, splitter: RecursiveCharacterTextSplitter):
-    pages, date = load_pdf(path)
-    domain = path.parent.name
-    source = path.name.removesuffix(".pdf").removesuffix(".pdf")  # fichiers en .pdf.pdf
-    current_article = ""
-    ids, docs, metas = [], [], []
-    for page_num, text in pages:
-        for j, chunk in enumerate(splitter.split_text(text)):
-            heading = ARTICLE_HEADING.search(chunk) or ARTICLE_ANY.search(chunk)
-            if heading:
-                current_article = f"Article {heading.group(1)}"
-            ids.append(hashlib.md5(f"{path.name}|{page_num}|{j}".encode()).hexdigest())
-            docs.append(chunk)
-            metas.append({
-                "source": source,
-                "article": current_article,
-                "date": date,
-                "domain": domain,
-                "page": page_num,
-            })
-    return ids, docs, metas
+    meta = corpus_metadata.get(key, {})
+    if not meta:
+        not_found.add(key)
 
+    chunk.metadata.update({
+        "document_id": meta.get("document_id", ""),
+        "title":       meta.get("title", ""),
+        "issuer":      meta.get("issuer", ""),
+        "reference":   meta.get("reference", ""),
+        "scope":       str(meta.get("scope", [])),   # ChromaDB n'accepte pas les listes
+        "source_url":  meta.get("source_url", ""),
+    })
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--reset", action="store_true", help="vide la collection avant indexation")
-    ap.add_argument("--model", default=EMBED_MODEL)
-    ap.add_argument("--collection", default=COLLECTION)
-    args = ap.parse_args()
+print(f"Chunks enrichis : {len(chunks)}")
+if not_found:
+    print(f"Clés introuvables : {not_found}")
+else:
+    print("Toutes les clés matchées")
 
-    pdfs = sorted(PDF_DIR.rglob("*.pdf"))
-    if not pdfs:
-        raise SystemExit(f"Aucun PDF trouvé dans {PDF_DIR}")
+# Vérification sur le premier chunk
+m = chunks[0].metadata
+print(f"\nExemple :")
+print(f"  document_id : {m['document_id']}")
+print(f"  title       : {m['title'][:70]}")
+print(f"  issuer      : {m['issuer']}")
+print(f"  reference   : {m['reference']}")
+# Step 4 : Indexer les chunks dans ChromaDB
+import chromadb
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP,
-        separators=["\n\n", "\n", ". ", " ", ""],
+# Client persistant — crée le dossier data/chroma_db
+client = chromadb.PersistentClient(path="data/chroma_db")
+
+embedding_fn = SentenceTransformerEmbeddingFunction(
+    model_name="all-MiniLM-L6-v2"
+)
+
+collection = client.get_or_create_collection(
+    name="regulatory_docs",
+    embedding_function=embedding_fn
+)
+
+# Préparer les données
+ids       = [f"chunk_{i}" for i in range(len(chunks))]
+texts     = [c.page_content for c in chunks]
+metadatas = [c.metadata for c in chunks]
+
+# Nettoyer les None (ChromaDB n'accepte que str/int/float/bool)
+for meta in metadatas:
+    for k, v in meta.items():
+        if v is None:
+            meta[k] = ""
+
+# Indexation par lots de 500
+BATCH = 500
+total = len(chunks)
+print(f"Indexation de {total} chunks...")
+
+for i in range(0, total, BATCH):
+    collection.add(
+        ids=ids[i:i+BATCH],
+        documents=texts[i:i+BATCH],
+        metadatas=metadatas[i:i+BATCH]
     )
-    model = SentenceTransformer(args.model)
-    model.max_seq_length = 256  # 512 car. ~ 130-170 tokens ; évite le padding inutile
-    prefix = "passage: " if "e5" in args.model else ""  # convention E5
+    print(f"  {min(i+BATCH, total)}/{total}")
 
-    CHROMA_DIR.mkdir(parents=True, exist_ok=True)
-    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-    if args.reset:
-        try:
-            client.delete_collection(args.collection)
-        except Exception:
-            pass
-    col = client.get_or_create_collection(args.collection, metadata={"hnsw:space": "cosine"})
-
-    total = 0
-    for pdf in tqdm(pdfs, desc="PDF"):
-        ids, docs, metas = chunk_document(pdf, splitter)
-        for k in range(0, len(docs), BATCH):
-            b = slice(k, k + BATCH)
-            # reprise : on saute les chunks déjà indexés (ids déterministes)
-            done = set(col.get(ids=ids[b], include=[])["ids"])
-            if len(done) == len(ids[b]):
-                continue
-            todo = [n for n, i in enumerate(ids[b]) if i not in done]
-            ids_b = [ids[b][n] for n in todo]
-            docs_b = [docs[b][n] for n in todo]
-            metas_b = [metas[b][n] for n in todo]
-            emb = model.encode([prefix + d for d in docs_b], normalize_embeddings=True).tolist()
-            col.upsert(ids=ids_b, documents=docs_b, embeddings=emb, metadatas=metas_b)
-        total += len(docs)
-    print(f"{total} chunks indexés ({col.count()} au total) dans {CHROMA_DIR} "
-          f"[{datetime.now():%H:%M:%S}]")
-
-
-if __name__ == "__main__":
-    main()
+print(f"\nChromaDB : {collection.count()} chunks indexés")
